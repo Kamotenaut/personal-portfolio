@@ -1,6 +1,5 @@
 (function() {
     "use strict";
-  
     /**
      * Easy selector helper function
      */
@@ -28,6 +27,8 @@
       }
     }
 
+    
+    
     const scrollto = (el) => {
       window.scrollTo({
         top: 0,
