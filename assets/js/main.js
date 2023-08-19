@@ -1,5 +1,15 @@
 (function() {
     "use strict";
+
+    // Spinner
+    var spinner = function () {
+        setTimeout(function () {
+            if ($('#spinner').length > 0) {
+                $('#spinner').removeClass('show');
+            }
+        }, 1);
+    };
+
     /**
      * Easy selector helper function
      */
@@ -86,7 +96,7 @@
         scrollto(this.hash)
       }
     }, true)
-  
+
     window.addEventListener('load', () => {
       if (window.location.hash) {
         let initial_nav = select(window.location.hash)
@@ -104,7 +114,8 @@
               item.classList.remove('active')
             }
           })
-  
+          
+          spinner();
           setTimeout(function() {
             initial_nav.classList.add('section-show')
           }, 350);
